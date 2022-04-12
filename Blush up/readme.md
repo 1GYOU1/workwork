@@ -1,1 +1,2 @@
 Blush Up !
+    - Jquery
