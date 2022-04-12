@@ -1,3 +1,3 @@
-Jquery UI
-    - show(),hide(),toggle()
-    - slideUp(),slideDown(),slideToggle()
+Jquery UI<br>
+    - show(),hide(),toggle()<br>
+    - slideUp(),slideDown(),slideToggle().
