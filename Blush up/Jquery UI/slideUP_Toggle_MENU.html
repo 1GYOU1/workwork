@@ -19,13 +19,17 @@
     .logo {margin:0 auto;}
     .logo a {display: block;width:200px;padding:10px 0;text-align: center;font-size:24px;}
     .main_menu{height:80%;display: flex;justify-content: space-around;}
-    .main_menu li{width:25%;}
+    .main_menu li{width:25%;position:relative;}
     .main_menu li a {display: block;padding:3px 0;text-align: center;font-weight: bold;}
     .main_menu li a:hover{color:#fff;}
-    /* .sub_menu{display: none;} */
+    .sub_menu{position:absolute;width:100%;background-color: #000;}}
     .sub_menu li{font-size:12px;width:100%;}
     .sub_menu li a {display: block;padding:3px 0;font-weight: 300;}
     .sub_menu li a:hover{color:#fff;}
+    .cont01{background-color: pink;height:100px;}
+    .cont02{background-color: palevioletred;height: 100px;}
+    .cont03{background-color: wheat;height: 100px;}
+
 
   </style>
 
@@ -39,6 +43,7 @@
 //----------------------------------------------css display (show hide와 같은 효과)
 
     // $(document).ready(function(){
+        
     //     var $subMenu=$('.sub_menu')
     //     var $mainMenu=$('.main_menu')
 
@@ -61,6 +66,7 @@
 
 
     //     $(document).ready(function(){
+
     //     var $subMenu=$('.sub_menu')
     //     var $mainMenu=$('.main_menu')
 
@@ -82,6 +88,7 @@
 
 
     // $(document).ready(function(){
+
     //     var $subMenu=$('.sub_menu')
     //     var $mainMenu=$('.main_menu')
 
@@ -104,6 +111,7 @@
 
 
     $(document).ready(function(){
+
         var $subMenu=$('.sub_menu')
         var $mainMenu=$('.main_menu')
 
@@ -174,6 +182,14 @@
                 </li>
             </ul>      
         </header>
+        <div class="contents">
+            <div class="cont01">
+            </div>
+            <div class="cont02">
+            </div>
+            <div class="cont03">
+            </div>
+        </div>
     </div>
 
 </body>
