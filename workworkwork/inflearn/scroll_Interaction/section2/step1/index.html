@@ -103,6 +103,9 @@
 			var scrollPercent = winScrollTop / scrollRealHeight * 100	//스크롤 백분율 구하기 = 현재 스크롤의 위치 / 실제 스크롤 거리 * 100
 			// console.log(scrollPercent)
 			var textPercent = Math.round(scrollPercent);//소수점 버리기
+			// Math.floor() : 소수점 이하를 버림한다.
+			// Math.ceil() : 소수점 이하를 올림한다.
+			// Math.round() : 소수점 이하를 반올림한다.
 			render(textPercent, scrollPercent)
 		}		
 
