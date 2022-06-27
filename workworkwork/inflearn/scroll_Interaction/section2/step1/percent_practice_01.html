@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="chrome=1,IE=edge">
+	<title>1GYOU1-scroll_practice_01</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="../../library/css/common.css">
+	<script type="text/javascript" src="../../library/js/jquery.1.12.4.js"></script>
+</head>
+<style type="text/css">
+.cont01_tit {
+	padding: 100px 0 80px;
+	font-size: 60px;
+	text-align: center;
+}
+
+.inner {
+	background: pink;
+}
+
+.inner .cont01 {
+	font-size: 115px;
+}
+
+.inner .cont01 .progress {
+	position: fixed;
+	left: 50%;
+	top: 450px;
+	width: 65%;
+	height: 50px;
+	transform: translateX(-50%);
+	border: 1px solid #3d3d3d;
+	text-align: center;
+}
+
+.inner .cont01 .progress .bar {
+	display: block;
+	width: 0%;
+	height: 100%;
+	;
+	background-color: #3d3d3d;
+}
+
+.inner .cont01 .progress .txt {
+	font-size: 30px;
+}
+</style>
+
+<body>
+	<div class="wrap">
+		<div class="inner">
+			<h2 class="cont01_tit">SCROLL</h2>
+			<div class="cont01">
+				<div class="progress">
+					<span class="bar"></span>
+					<p class="txt">
+						0%
+					</p>
+				</div>
+				01<br>
+				02<br>
+				03<br>
+				04<br>
+				05<br>
+				06<br>
+				07<br>
+				08<br>
+				09<br>
+				10<br>
+				11<br>
+				12<br>
+				13<br>
+				14
+			</div>
+		</div>
+	</div>
+	<script>
+
+		//wrap의 높이
+		//wrap의 높이 - 현재 화면에서 나타나는 높이 값 = 스크롤 거리
+		//현재 스크롤 위치
+		//스크롤 백분율 구하기 = 현재 스크롤의 위치 / 실제 스크롤 거리 * 100
+		//소수점 버리기
+
+		var txt = $('.txt');
+		var bar = $('.bar');
+
+		$(window).scroll(function(){
+			percentage();
+		});
+
+		function percentage(){
+			var wrapHeight = $('.wrap').height();
+			// console.log(wrapHeight)	//2415
+			var wrapRealHeight = wrapHeight - $(window).height(); 
+			// console.log(wrapRealHeight)	//1661
+			var scrollTop = $(window).scrollTop();
+			// console.log(scrollTop)
+			var percent = scrollTop / wrapRealHeight * 100;
+			// console.log(percent);
+			var textPercent = Math.round(percent);
+			// console.log(textPercent);
+
+			txt.text(textPercent + '%');
+			// console.log(txt);
+			bar.css({width : percent + '%'});
+			// console.log(bar)
+
+		};
+
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
