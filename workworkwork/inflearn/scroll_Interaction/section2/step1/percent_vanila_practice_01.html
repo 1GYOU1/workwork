@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="chrome=1,IE=edge">
+<title>1GYOU1-scroll_vanila_01</title>
+<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="../../library/css/common.css">
+</head>
+<style type="text/css">
+.com_tit {padding:100px 0 80px; font-size:50px; text-align: center;}
+
+.sec01 {background: skyblue;color:#fff;}
+.sec01 .content {font-size:120px;}
+.sec01 .content .progress {position:fixed; left:50%; top:500px; width:70%; height:100px; margin-left:-35%; border:1px solid #fff;; text-align: center;}
+.sec01 .content .progress .bar {display: block; width:0%; height:100%;; background-color: #fff;}
+.sec01 .content .progress .txt {font-size:30px;}
+</style>
+<body>
+	<div class="wrap">
+		<section class="sec01">
+			<h2 class="com_tit">scroll</h2>
+			<article class="content">
+				<div class="progress">
+					<span class="bar"></span>
+					<p class="txt">
+						0%
+					</p>
+				</div>
+				1<br>
+				2<br>
+				3<br>
+				4<br>
+				5<br>
+				6<br>
+				7<br>
+				8<br>
+				9<br>
+				10<br>
+				11<br>
+				12<br>
+				13<br>
+				14
+			</article>
+		</section>
+	</div>
+
+<script type="text/javascript">
+	
+window.addEventListener('scroll', onscroll);
+
+function onscroll(){
+    let bar = document.querySelector('.bar');
+    let txt = document.querySelector('.txt');
+    let wrapHeight = document.querySelector('.wrap').offsetHeight;
+    let scrollHeight = wrapHeight - window.innerHeight;
+    let scrollTop = window.pageYOffset;
+    let percent = scrollTop/scrollHeight*100;
+    let textPercent = Math.round(percent);
+    bar.style.width = percent + '%';
+    txt.innerText = textPercent + '%';
+
+    console.log(bar.style.width)
+
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
