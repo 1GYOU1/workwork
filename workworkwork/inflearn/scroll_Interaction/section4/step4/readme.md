@@ -99,6 +99,20 @@ __select__|텍스트를 선택했을 때|
 
 <br>
 
+```js
+element.addEventListener('click', EventAct, false);
+```
+
+<br>
+
+* 1번째 인자는 이벤트명이다.
+
+* 2번째 인자는 콜백 함수로, 이벤트가 발생되면 실행.
+
+* 3번째 인자는 useCapture 불린 값, 이벤트 버블링이나 캡쳐링을 사용할 것인지 나타냄.
+
+<br>
+
 참고 사이트
 
 * [이벤트 참조](https://developer.mozilla.org/ko/docs/Web/Events)
