@@ -40,6 +40,7 @@ HTML ↓
 JS ↓
 ```js
 console.log(document.getElementById('link').getAttribute('href'))
+
 //#; 출력
 ```
 <br>
@@ -52,7 +53,9 @@ console.log(document.getElementById('link').getAttribute('href'))
 JS ↓
 ```js
 document.getElementById('link').setAttribute('href','https://github.com/1GYOU1')
+
 console.log(document.getElementById('link').getAttribute('href'))
+
 // https://github.com/1GYOU1 출력
 ```
 <br>
@@ -65,7 +68,9 @@ console.log(document.getElementById('link').getAttribute('href'))
 JS ↓
 ```js
 document.getElementById('link').removeAttribute('href');
+
 console.log(document.getElementById('link'))
+
 // href 삭제
 ```
 <br>
