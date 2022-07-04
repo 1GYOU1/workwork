@@ -12,7 +12,11 @@ let b  = a.forEach(function(element, index, array){ //요소, 인덱스, 배열
     console.log(index)
     console.log(array)
 })
-```  
+``` 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/90018379/177112718-94b58618-a070-4daa-8713-49b692628004.jpg">
+</p>
+
 <br>
 
 참고 사이트
