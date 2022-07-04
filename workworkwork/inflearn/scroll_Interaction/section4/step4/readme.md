@@ -111,6 +111,8 @@ element.addEventListener('click', EventAct, false);
 
 * 3번째 인자는 useCapture 불린 값, 이벤트 버블링이나 캡쳐링을 사용할 것인지 나타냄.
 
+    * [참고 사이트](https://chlolisher.tistory.com/22)
+
 <br>
 
 참고 사이트
