@@ -4,16 +4,14 @@
 
 <br>
 
-```c
-<script>
-    let a = ['가', '나', '다', '라', '마'] //: 배열
+```js
+let a = ['가', '나', '다', '라', '마'] //: 배열
 
-    let b  = a.forEach(function(element, index, array){ //요소, 인덱스, 배열
+let b  = a.forEach(function(element, index, array){ //요소, 인덱스, 배열
     console.log(element)
     console.log(index)
     console.log(array)
-    })
-</script>
+})
 ```  
 <br>
 
@@ -32,17 +30,17 @@
 
 선택한 요소(element)의 특정 속성(attribute)값에 접근, 가져오기.
 <br>
-```c
-<body>
-  <a href="#;" id="link">
-    <img src="https://via.placeholder.com/200" alt="">
-  </a>
-</body>
 
-<script>
+HTML ↓
+```html
+<a href="#;" id="link">
+    <img src="https://via.placeholder.com/200" alt="">
+</a>
+```
+JS ↓
+```js
 console.log(document.getElementById('link').getAttribute('href'))
 //#; 출력
-</script>
 ```
 <br>
 
@@ -50,12 +48,12 @@ console.log(document.getElementById('link').getAttribute('href'))
 <br>
 
 선택한 요소(element)의 특정 속성(attribute)값에 추가, 수정하기.
-```c
-<script>
+
+JS ↓
+```js
 document.getElementById('link').setAttribute('href','https://github.com/1GYOU1')
 console.log(document.getElementById('link').getAttribute('href'))
 // https://github.com/1GYOU1 출력
-</script>
 ```
 <br>
 
@@ -63,12 +61,12 @@ console.log(document.getElementById('link').getAttribute('href'))
 <br>
 
 선택한 요소(element)의 특정 속성(attribute)값 삭제하기.
-```c
-<script>
-  document.getElementById('link').removeAttribute('href');
-  console.log(document.getElementById('link'))
-  // href 삭제
-</script>
+
+JS ↓
+```js
+document.getElementById('link').removeAttribute('href');
+console.log(document.getElementById('link'))
+// href 삭제
 ```
 <br>
 
