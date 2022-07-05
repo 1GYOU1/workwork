@@ -1,5 +1,16 @@
-# < CSS - Keyframe >
+# < CSS >
 
+<br>
+
+## __transition, transform, translate__
+
+<br>
+
+참고 사이트
+
+* [예시](https://it-eldorado.tistory.com/110)
+
+<br>
 <br>
 
 ## __transform-origin__
