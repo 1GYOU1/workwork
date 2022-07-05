@@ -9,6 +9,7 @@
 참고 사이트
 
 * [예시](https://it-eldorado.tistory.com/110)
+* [CSS3 전환(transition) 지원 버전](http://www.tcpschool.com/css/css3_transform_transition)
 
 <br>
 <br>
