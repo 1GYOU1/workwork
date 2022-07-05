@@ -20,8 +20,8 @@ transform-origin: bottom right 60px;
 
 참고 사이트
 
-* [css - transform-origin](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
-* [사용 예시 소스](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
+* [transform-origin](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
+* [1GYOU1 - 사용 소스](https://github.com/1GYOU1/workwork/blob/main/keyframe/transform_origin.html)
 
 <br>
 
