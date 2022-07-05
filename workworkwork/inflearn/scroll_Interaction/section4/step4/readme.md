@@ -1,5 +1,7 @@
 # < javascript >
 
+<br>
+
 ## __.forEach__
 
 <br>
@@ -28,8 +30,11 @@ let b  = a.forEach(function(element, index, array){ //요소, 인덱스, 배열
 
 ---------
 <br>
+<br>
 
 ## __.addEventListener 이벤트 종류__
+
+<br>
 <br>
 
 ### ↓ 브라우저의 UI와 상호작용 ↓
@@ -44,6 +49,7 @@ __resize__|브라우저의 창 크기 조절 할 때|
 __scroll__|사용자가 페이지를 위아래로 스크롤 할 때|
 
 <br>
+<br>
 
 ### ↓ 키보드 이벤트 ↓
 <br>
@@ -54,6 +60,7 @@ __keydown__|사용자가 키를 처음 눌렀을 때|
 __keyup__|키를 땔 때|
 __keypress__|사용자가 눌렀던 키의 문자가 입력되었을 때|
 
+<br>
 <br>
 
 ### ↓ 마우스 이벤트 ↓
@@ -70,17 +77,26 @@ __mouseover__|요소 위로 마우스를 움직였을 때|
 __mouseout__|요소 바깥으로 마우스를 움직였을 때|
 
 <br>
+<br>
 
 ### ↓ 포커스 이벤트 ↓
 <br>
 
-이벤트|설명|
-:---:|:---|
-__focus__|요소가 포커스를 얻었을 때|
-__focusin__||
-__blur__|요소가 포커스를 잃었을 때|
-__focusout__||
+이벤트|설명|버블링
+:---:|:---|:---:
+__focus__|요소가 포커스를 얻었을 때 |발생 안함|
+__focusin__|focus가 들어갔을 때 이벤트 발생 |발생함|
+__blur__|요소가 포커스를 잃었을 때 |발생 안함|
+__focusout__|focus가 빠져나왔을 때 이벤트 발생 |발생함|
 
+
+<br>
+
+### 정리
+- focus & blur / focusin & focusout 짝 지어서 사용
+- 부모요소에서 리스너를 동작하고 싶다면 focusein / focusout 사용 - [설명 더보기](https://ibrahimovic.tistory.com/13)
+
+<br>
 <br>
 
 ### ↓ 폼 이벤트 ↓
@@ -123,6 +139,7 @@ element.addEventListener('click', EventAct, false);
 
 ---------
 <br>
+<br>
 
 ## __.offsetWidth, .offsetHeight__
 <br>
@@ -141,6 +158,7 @@ JS ↓
 ```js
 console.log(document.querySelector('.box1').offsetWidth);
 ```
+<br>
 <br>
 
 ## __.clientWidth, .clientHeight__
@@ -161,6 +179,7 @@ JS ↓
 console.log(document.querySelector('.box1').clientWidth);
 ```
 <br>
+<br>
 
 ## __.scrollWidth, .scrollHeight__
 
@@ -178,6 +197,7 @@ JS ↓
 ```js
 console.log(document.querySelector('.box1').scrollWidth);
 ```
+<br>
 <br>
 
 ## __window.pageYOffset, window.pageXOffset__
@@ -208,6 +228,7 @@ console.log(window.pageYOffset);
 
 ---------
 <br>
+<br>
 
 ## __.getAttribute__
 <br>
@@ -228,6 +249,7 @@ console.log(document.getElementById('link').getAttribute('href'))
 //a 태그의 href 값인 #; 출력
 ```
 <br>
+<br>
 
 ## __.setAttribute__
 <br>
@@ -242,6 +264,7 @@ console.log(document.getElementById('link').getAttribute('href'))
 
 // https://github.com/1GYOU1 출력
 ```
+<br>
 <br>
 
 ## __.removeAttribute__
