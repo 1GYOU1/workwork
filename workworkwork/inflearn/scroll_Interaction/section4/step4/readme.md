@@ -92,7 +92,7 @@ __focusout__|focus가 빠져나왔을 때 이벤트 발생 |발생함|
 
 <br>
 
-### 정리
+정리
 - focus & blur / focusin & focusout 짝 지어서 사용
 - 부모요소에서 리스너를 동작하고 싶다면 focusein / focusout 사용 - [설명 더보기](https://ibrahimovic.tistory.com/13)
 
@@ -215,7 +215,7 @@ console.log(window.pageYOffset);
 
 <br>
 
-### 정리
+정리
 - border, padding 포함, margin X - offsetWidth, offsetHeight,
 
 - border, margin을 포함하지 않고, 스크롤바의 크기도 고려할 필요가 없을 때 - clientWidth, clientHeight
