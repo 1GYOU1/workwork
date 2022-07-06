@@ -28,7 +28,7 @@
     /* animation 속성 */
     /* https://brunch.co.kr/@99-life/3 */
     
-    .cung_ani {animation:1s 1s hand ease-in-out infinite alternate; display: none;}
+    .cung_ani {animation:1s 1s blink ease-in-out infinite alternate; display: none;}
 
     @keyframes cung_ani {
     0% {
@@ -42,11 +42,22 @@
 
     }
 
-    @keyframes hand{
+    @keyframes blink{
         0%{opacity:0;}
         100%{opacity:1;}
     }
 
+    .test_cont{display: none;}
+
+    .test_cont01{position:absolute;top:933px;left:50%;transform: translateX(-50%);animation: top_show 1s forwards; display: none}
+
+
+    @keyframes top_show{
+        0%{opacity:0;
+            margin-top:200px;}
+        100%{opacity:1;
+            margin-top:0;}
+    }
 
     </style>
 </head>
@@ -56,17 +67,20 @@
         
             <div class="main_visual">
                 <div class="inner p_r">
-                    <img src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v4/main_img.jpg" alt="">
+                    <img src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/main_img.jpg" alt="">
 
                     <div class="cont_test">
-                        <img class="test_tit_1" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v4/test_tit_1.png" alt="">
+                        <img class="test_tit_1" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_1.png" alt="">
 
                         <div class="cung_ani">
-                            <img class="test_tit_2" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v4/test_tit_2.png" alt="">
-                            <img class="test_tit_3" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v4/test_tit_3.png" alt="">
+                            <img class="test_tit_2" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_2.png" alt="">
+                            <img class="test_tit_3" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_3.png" alt="">
                         </div>
 
-                        <img class="test_cont" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v4/main_cont.png" alt="">
+                        <img class="test_cont" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/main_cont.png" alt="">
+                        
+                        <img class="test_cont01" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_cont01.png" alt="">
+                        
                     </div>
                 </div>
             </div>
@@ -83,7 +97,13 @@
     }, 200);
     setTimeout(function(){
         document.querySelector('.cung_ani').style.display = 'block';
-    }, 400);
+    }, 600);
+    setTimeout(function(){
+        document.querySelector('.test_cont').style.display = 'block';
+    }, 1200);
+    setTimeout(function(){
+        document.querySelector('.test_cont01').style.display = 'block';
+    }, 1800);
 })();
 
 </script>
