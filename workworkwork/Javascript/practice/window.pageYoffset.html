@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    .wrap{height:600vh}
+    .inner{width: 1000px;margin: 0 auto;text-align: center;}
+    .p_r{position:relative;}
+
+    .main_visual{background: url('//gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/v1/main_bg.jpg')no-repeat center top;}
+    .wrap img{width:100%;vertical-align: top;}
+
+    .cont_test .test_tit_1{position:absolute;top:150px;left: 93px;width:800px; display: none;}
+    .cont_test .test_tit_2{position:absolute;top:315px;left:0px;width:500px}
+    .cont_test .test_tit_3{position:absolute;top:300px;right:0px;width:500px}
+
+    .cont_test .test_cont{position:absolute;top:560px;left: 50%;transform: translateX(-50%);}
+
+    .cung_ani img{animation: cung_ani 0.3s forwards cubic-bezier(0.3, 0.27, 0, 1.1);}
+    /* forwards : 변경된 상태 유지 */
+    /* cubic-bezier */
+    /* https://kutar37.tistory.com/entry/CSS-cubic-bezier%EB%9E%80 */
+    /* https://cubic-bezier.com/#.14,.83,.86,.26 */
+    /* animation 속성 */
+    /* https://brunch.co.kr/@99-life/3 */
+    
+    .cung_ani {animation:1s 1s blink ease-in-out infinite alternate; display: none;}
+
+    @keyframes cung_ani {
+    0% {
+        opacity: 0;
+        transform: scale(5.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    }
+
+    @keyframes blink{
+        0%{opacity:0;}
+        100%{opacity:1;}
+    }
+
+    .test_cont{display: none;}
+
+    .test_cont01{position:absolute;top:933px;left:50%;transform: translateX(-50%);animation: top_show 1s forwards; display: none}
+
+
+    @keyframes top_show{
+        0%{opacity:0;
+            margin-top:200px;}
+        100%{opacity:1;
+            margin-top:0;}
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        
+            <div class="main_visual">
+                <div class="inner p_r">
+                    <img src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/main_img.jpg" alt="">
+
+                    <div class="cont_test">
+                        <img class="test_tit_1" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_1.png" alt="">
+
+                        <div class="cung_ani">
+                            <img class="test_tit_2" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_2.png" alt="">
+                            <img class="test_tit_3" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_tit_3.png" alt="">
+                        </div>
+
+                        <img class="test_cont" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/main_cont.png" alt="">
+                        
+                        <img class="test_cont01" src="https://gscdn.hackers.co.kr/champ/img/china/event/2022/04/0501/pc/type1/test/test_cont01.png" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+
+</body>
+
+<script>
+(function(){
+
+    window.addEventListener('scroll', function(){
+
+        let scrollTop = window.pageYOffset;
+
+        console.log(scrollTop);
+
+    })
+
+    setTimeout(function(){
+        document.querySelector('.test_tit_1').style.display = 'block';
+    }, 200);
+    setTimeout(function(){
+        document.querySelector('.cung_ani').style.display = 'block';
+    }, 600);
+    setTimeout(function(){
+        document.querySelector('.test_cont').style.display = 'block';
+    }, 1200);
+    setTimeout(function(){
+        document.querySelector('.test_cont01').style.display = 'block';
+    }, 1800);
+
+})();
+
+</script>
+
+</html>
