@@ -214,15 +214,40 @@ console.log(window.pageYOffset);
 ```
 
 <br>
+<br>
 
-정리
-- border, padding 포함, margin X - offsetWidth, offsetHeight,
+## __.offsetTop__
 
-- border, margin을 포함하지 않고, 스크롤바의 크기도 고려할 필요가 없을 때 - clientWidth, clientHeight
+<br>
 
-- 영역 내부의 컨텐츠 크기까지 (총 스크롤 크기) 고려해야 한다면 - scrollWidth, scrollHeight.
+가장 가까운 위치 에 있는 조상 요소 HTMLElement.offsetTop의 상단 내부 경계를 기준으로 현재 요소의 외부 경계까지의 거리를 반환
 
-- 웹 문서가 얼마나 스크롤됐는지 알고싶다면 - window.pageYOffset, window.pageXOffset
+<br>
+
+JS ↓
+```js
+let contTop = document.querySelector('.cont01').offsetTop;
+```
+
+<br>
+
+참고 사이트
+
+* [div 요소의 top(시작) 위치 알아내기](https://mosei.tistory.com/entry/Javascript-div-%EC%9A%94%EC%86%8C%EC%9D%98-top%EC%8B%9C%EC%9E%91-%EC%9C%84%EC%B9%98-%EC%95%8C%EC%95%84%EB%82%B4%EA%B8%B0)
+
+<br>
+<br>
+
+<정리>
+- __offsetWidth, offsetHeight__ - border, padding 포함, margin X
+
+- __clientWidth, clientHeight__ - border, margin을 포함하지 않고, 스크롤바의 크기도 고려할 필요가 없을 때
+
+- __scrollWidth, scrollHeight__ - 영역 내부의 컨텐츠 크기까지 (총 스크롤 크기) 고려해야 할 때.
+
+-  __window.pageYOffset, window.pageXOffset__ - 웹 문서가 얼마나 스크롤됐는지 알고싶을 때
+
+- __.offsetTop__ - 조상 요소를 기준으로 현재 요소의 거리 반환
 
 <br>
 
