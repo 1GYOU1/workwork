@@ -25,7 +25,7 @@ window.scrollTo()
 var dir = moveY > window.pageTOffset ? 1 : -1;
 ```
 
-.wheel
+[.wheel](https://m.blog.naver.com/a_ugust/221982749023)
 
 .each문 활용해서 offsetTop[1] 작성 해보기
 
@@ -46,3 +46,6 @@ function checkInSection(){
 function sectionActive(index){
     console.log(index)
 }
+```
+
+[if(a)와 if(!a)의 차이점](https://dojang.io/mod/forum/discuss.php?d=1267)
