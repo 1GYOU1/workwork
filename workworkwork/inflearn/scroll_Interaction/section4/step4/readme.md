@@ -163,6 +163,8 @@ removeEventListener("이벤트 이름", 실행할 함수 )
 event.preventDefault();
 ```
 
+<br>
+
 ---------
 <br>
 <br>
