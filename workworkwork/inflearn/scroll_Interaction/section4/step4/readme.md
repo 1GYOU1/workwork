@@ -136,6 +136,32 @@ element.addEventListener('click', EventAct, false);
 * [이벤트 참조](https://developer.mozilla.org/ko/docs/Web/Events)
 
 <br>
+<br>
+
+## __.removeEventListener__
+
+<br>
+<br>
+
+이전에 addEventListener로 등록한 이벤트 리스너를  삭제
+
+```js
+removeEventListener("이벤트 이름", 실행할 함수 )
+```
+
+<br>
+<br>
+
+## __.preventDefault()__
+
+<br>
+<br>
+
+이벤트를 전파시키지 않고 이벤트를 취소, 또는 발생하지 않은 것처럼 이벤트 자체를 없애 버린다.
+
+```js
+event.preventDefault();
+```
 
 ---------
 <br>

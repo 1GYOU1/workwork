@@ -8,6 +8,8 @@ classList.remove('') 클래스 지우기
 
 classList.contains('') 클래스 있는지 확인
 
+classList.toggle('') 클래스값이 있는지 체크하고 없으면 더하고 있으면 제거한다.
+
 
 setInterval
 
