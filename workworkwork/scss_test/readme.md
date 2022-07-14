@@ -42,6 +42,16 @@ include해서 사용
 
 <br>
 
+```scss
+/* 변수 */
+$page: main;
+
+/* SCSS 적용 (O) */
+.#{$page}_wrap{
+  ...
+}
+```
+
 [Interpolation 보간법](https://abcdqbbq.tistory.com/82)
 
 <br>
