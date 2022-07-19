@@ -77,11 +77,13 @@ div.classList.toggle('on');
 ## __.setInterval__
 <br>
 
-함수를 주기적으로 실행
+매 타이머마다 함수나 지정된 코드를 실행하는 타이머를 설정
 
 JS ↓
 ```js
-timer = setInterval(clock, 1000);
+setInterval(function() {
+    alert("A");
+},1000)
 ```
 <br>
 <br>
@@ -89,22 +91,27 @@ timer = setInterval(clock, 1000);
 ## __.clearInterval__
 <br>
 
-현재 진행되고 있는 함수의 진행을 멈추기
+setTimeout 메서드나 setInterval 메서드의 호출을 중지
 
 JS ↓
 ```js
-clearInterval(timer);
+var time = setTimeout(function() {
+    alert("A");
+},5000)
+clearTimeout(time);
 ```
 <br>
 
 ## __.setTimeout__
 <br>
 
-일정시간이 지난 후 인자로 받은 함수를 한번 실행해주는 메소드
+타이머가 만료된 뒤 함수나 지정된 코드를 실행하는 타이머를 설정
 
 JS ↓
 ```js
-setTimeout("alert('안녕하세요.')", 1000);
+setTimeout(function() {
+    alert("A");
+}, 5000
 ```
 
 ---------
