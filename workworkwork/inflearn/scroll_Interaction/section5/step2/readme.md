@@ -26,6 +26,40 @@ console.log(document.querySelector('.cont01').getBoundingClientRect());
 
 <br>
 
+## __window.scrollTo()__
+<br>
+
+JS ↓
+```js
+window.scrollTo(x-좌표, y-좌표)
+window.scrollTo( 0, 1000 );
+```
+
+??? ↓
+```js
+var dir = moveY > window.pageTOffset ? 1 : -1;
+```
+<br>
+
+---------
+
+<br>
+
+## __.wheel__
+<br>
+
+```js
+el.addEventListener('wheel', zoom);
+```
+
+[.wheel](https://m.blog.naver.com/a_ugust/221982749023)
+
+<br>
+
+---------
+
+<br>
+
 ## __.classList.add('')__
 <br>
 
@@ -115,32 +149,10 @@ setTimeout(function() {
 ```
 
 ---------
-<br>
-## __window.scrollTo()__
-<br>
 
-.
-
-JS ↓
-```js
-var dir = moveY > window.pageTOffset ? 1 : -1;
-```
 <br>
 
----------
-
-## __.wheel__
-<br>
-
-```js
-el.addEventListener('wheel', zoom);
-```
-
-[.wheel](https://m.blog.naver.com/a_ugust/221982749023)
-
-
----------
-
+??? ↓
 
 .each문 활용해서 offsetTop[1] 작성 해보기
 
