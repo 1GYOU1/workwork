@@ -6,7 +6,8 @@
 <br>
 
 요소 좌표 얻기.
-x와 y – 요소를 감싸는 네모의 창 기준 X, Y 좌표
+
+x와 y – 요소를 감싸는 네모의 창 기준 X, Y 좌표.
 - width와 height – 요소를 감싸는 네모의 너비, 높이(음수도 가능)
 - x와 y, width와 height 이외에 다음과 같은 파생 프로퍼티도 있습니다.
 
@@ -27,6 +28,9 @@ console.log(document.querySelector('.cont01').getBoundingClientRect());
 <br>
 
 ## __window.scrollTo()__
+<br>
+
+문서의 지정된 위치로 스크롤.
 <br>
 
 JS ↓
@@ -69,29 +73,31 @@ JS ↓
 ```js
 div.classList.add('on');
 ```
-<br>
+
 <br>
 
 ## __.classList.remove('')__
 <br>
 
 클래스 지우기.
+
 JS ↓
 ```js
 div.classList.remove('on');
 ```
-<br>
+
 <br>
 
 ## __.classList.contains('')__
 <br>
 
 클래스 있는지 확인하기.
+
 JS ↓
 ```js
 div.classList.contains('on');
 ```
-<br>
+
 <br>
 
 ## __.classList.toggle('')__
@@ -120,6 +126,18 @@ setInterval(function() {
 },1000)
 ```
 <br>
+
+## __.setTimeout__
+<br>
+
+타이머가 만료된 뒤 함수나 지정된 코드를 실행하는 타이머를 설정
+
+JS ↓
+```js
+setTimeout(function() {
+    alert("A");
+}, 5000
+```
 <br>
 
 ## __.clearInterval__
@@ -135,18 +153,6 @@ var time = setTimeout(function() {
 clearTimeout(time);
 ```
 <br>
-
-## __.setTimeout__
-<br>
-
-타이머가 만료된 뒤 함수나 지정된 코드를 실행하는 타이머를 설정
-
-JS ↓
-```js
-setTimeout(function() {
-    alert("A");
-}, 5000
-```
 
 ---------
 
