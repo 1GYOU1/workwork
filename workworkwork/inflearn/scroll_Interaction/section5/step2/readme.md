@@ -18,6 +18,7 @@ JS ↓
 console.log(document.querySelector('.cont01').getBoundingClientRect());
 ```
 
+![캡처](https://user-images.githubusercontent.com/90018379/179651728-cb39d2ae-62d0-42af-b8ea-b5f19cee1c72.PNG)
 
 <br>
 
