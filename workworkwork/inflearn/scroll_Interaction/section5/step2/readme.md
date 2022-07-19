@@ -33,7 +33,7 @@ console.log(document.querySelector('.cont01').getBoundingClientRect());
 
 JS ↓
 ```js
-
+div.classList.add('on');
 ```
 <br>
 <br>
@@ -42,10 +42,9 @@ JS ↓
 <br>
 
 클래스 지우기.
-
 JS ↓
 ```js
-
+div.classList.remove('on');
 ```
 <br>
 <br>
@@ -54,22 +53,20 @@ JS ↓
 <br>
 
 클래스 있는지 확인하기.
-
 JS ↓
 ```js
-
+div.classList.contains('on');
 ```
 <br>
 <br>
 
 ## __.classList.toggle('')__
 <br>
-
 클래스값이 있는지 체크하고 없으면 더하고 있으면 제거하기.
 
 JS ↓
 ```js
-
+div.classList.toggle('on');
 ```
 <br>
 
@@ -80,13 +77,11 @@ JS ↓
 ## __.setInterval__
 <br>
 
-.
+함수를 주기적으로 실행
 
 JS ↓
 ```js
-var loop = setInterval(function(){
-
-}, 10)
+timer = setInterval(clock, 1000);
 ```
 <br>
 <br>
@@ -94,13 +89,23 @@ var loop = setInterval(function(){
 ## __.clearInterval__
 <br>
 
-.
+현재 진행되고 있는 함수의 진행을 멈추기
 
 JS ↓
 ```js
-
+clearInterval(timer);
 ```
 <br>
+
+## __.setTimeout__
+<br>
+
+일정시간이 지난 후 인자로 받은 함수를 한번 실행해주는 메소드
+
+JS ↓
+```js
+setTimeout("alert('안녕하세요.')", 1000);
+```
 
 ---------
 <br>
