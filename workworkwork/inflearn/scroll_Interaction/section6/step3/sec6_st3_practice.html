@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>깡코딩 - 초보자도 만들 수 있는 스크를인터렉션1편</title>
+<link rel="stylesheet" type="text/css" href="../../library/css/common.css">
+<link rel="stylesheet" type="text/css" href="../step3/css/step3_style.css">
+<script type="text/javascript" src="../../library/js/jquery.1.12.4.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header class="header_wrap">
+			<div class="logo">GGANG CODING</div>
+		</header>
+		<section class="section_product">
+			<article class="prd_mask">
+				<ul class="img_list">
+					<li>
+						<figure class="img_content">
+							<img src="../images/1.jpg">
+						</figure>
+					</li>
+					<li>
+						<figure class="img_content">
+							<img src="../images/2.jpg">
+						</figure>
+					</li>
+					<li>
+						<figure class="img_content">
+							<img src="../images/3.jpg">
+						</figure>
+					</li>
+					<li>
+						<figure class="img_content">
+							<img src="../images/4.jpg">
+						</figure>
+					</li>
+				</ul>
+			</article>
+			<article class="text_img">
+				<div class="text_area">
+					<h3 class="tit">ABCDEFG</h3>
+					<p class="txt">
+						abcdfgabcdfgabcdfgabcdfg<br>
+						abcdfgabcdfgabcdfgabcdfgabcdfgabcdfgabcdfg<br>
+						abcdfgabcdfgabcdfgabcdfgabcdfgabcdfgabcdfgabcdfgabcdfg
+					</p>
+				</div>
+				<div class="img_area">
+					<figure>
+						<img src="../images/6.jpg">
+					</figure>
+				</div>
+			</article>
+		</section>
+		<footer class="footer">
+			<div class="text_area">
+				<p>
+					2022 1GYOU1.
+				</p>
+			</div>
+		</footer>
+	</div>
+<script type="text/javascript">
+setTimeout(function() {
+	$('.section_product .prd_mask').addClass('active');
+	$('.section_product .text_img').addClass('active');
+},200);
+</script>
+</body>
+</html>
