@@ -33,58 +33,62 @@
 		</footer>
 	</div>
 
-<script type="text/javascript">
-
-$(function(){
-
-	/* 날짜 카운트*/
-	function countDate() {
-
-		var el = $('.date_count');
-		var date = new Date();
-		var todayDate = String(date.getFullYear()) + String(date.getMonth() + 1) + String(date.getDate());
-		var rolling = 24;
-		var resultArray = [];
-			resultArray = todayDate.split('');
-
-		$.each(resultArray, function(idx, val) {
-			var conuntBox = $('<div class="count_box" />');
-			var numberArray = [];
-			var number = Number(val);
-
-			for(var i = 0; i <= rolling; i++) {
-				var sum = number + i;
-				var num = sum >= 10 ? Number(String(sum).split('')[1]) : sum;
-				numberArray[i] = num;
-			};
-
-			numberArray.reverse();
-
-			numberArray.forEach(function(val) {
-
-				var countValue = $('<span/>', {
-					text: val
-				});
-
-			countValue.appendTo(conuntBox);
-			});
-
-			conuntBox
-			.appendTo(el)
-			.delay(idx * 300)
-			.queue(function(){
-				$(this).addClass('active');
-			});
+	<script type="text/javascript">
+		$(function() {
+			
+			countDate();
+	
+			function countDate(){
+				var el = $('.date_count');
+				var date = new Date();	//현재날짜,시간
+				var todayDate = String(date.getFullYear()) + String(date.getMonth() + 1) + String(date.getDate());	//string 타입으로 현재날짜 변환
+				var resultArray = [];	//빈 배열 세팅
+					resultArray = todayDate.split('');	//한글자씩 배열로 자르기
+				var rolling = 24;	//롤링 될 숫자 24개씩 세팅
+	
+					$.each(resultArray, function(idx, val){
+						var number = Number(val);	//string타입을 number타입으로 다시 변환
+						var numberArray = [];	//빈배열 세팅
+						var countBox = $('<div class="count_box" />');	//div.count_box 만들어주기
+	
+						for(var i = 0; i <= rolling; i++){	//롤링 될 숫자 1씩 더해주면서 25번 반복
+							var sum = number + i;	//현재날짜 + i씩 해주기
+							var num = String(sum)	//다시 string 타입으로 변환
+							
+							if(sum >= 10){	//두 자리수 숫자는 앞자리 제거하기
+								num = Number(String(sum).split('')[1])
+							}else{	//한 자리 수는 그대로 노출
+								num = sum;
+							}
+	
+							numberArray[i] = num;	//배열로 만들어주기
+	
+						}
+	
+						numberArray.reverse();	//배열 거꾸로 변환
+	
+						numberArray.forEach(function(val){	//value값 넣어서 span태그 만들어주기 
+							var countValue = $('<span/>', {
+								text : val
+							})
+							countValue.appendTo(countBox);	//div.countBox안에 span태그 넣어주기
+							// console.log(countValue, countValue[0].innerText);
+						})
+	
+						countBox.appendTo(el)	//div.date_count안에 div.countBox 넣어주기
+						.delay(idx * 300)	//0.3초씩 딜레이
+						.queue(function(){	//active클래스 넣어주기
+							$(this).addClass('active');
+							console.log(idx, this);
+						})
+	
+					});
+	
+		
+			
+			}
+	
 		});
-
-	};
-	countDate();
-});
-
-setTimeout(function() {
-	$('section').addClass('active');
-},200);
-
-</script>
+		</script>
 </body>
 </html>
