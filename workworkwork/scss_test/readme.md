@@ -14,6 +14,7 @@
 
 <br>
 
+선언
 ```scss
 @mixin abc {
     100% {
@@ -21,7 +22,9 @@
     }
 }
 ```
-선언 후
+<br>
+
+include해서 사용
 ```scss
 @keyframes showHide {
     0% {
@@ -30,9 +33,48 @@
     @include abc;
 }
 ```
-include해서 사용
-
 <br>
+
+### __@mixin + @if 조건문 사용__
+<br>
+
+예시1)
+```scss
+@mixin pink($type) {
+	@if $type == color{
+		color:pink;
+	}
+	@else if $type == bg{
+		background-color:pink;
+	}
+}
+```
+```scss
+@include plum(color);
+@include plum(bg);
+```
+<br>
+
+예시2)
+```scss
+@mixin fontSize($size) {
+	@if $size == small{
+		font-size:12px;
+	}
+	@else if $size == midium{
+		font-size:16px;
+	}
+  @else if $size == big{
+		font-size:24px;
+	}
+}
+```
+```scss
+@include fontSize(small);
+@include fontSize(midium);
+@include fontSize(big);
+```
+
 
 ----
 
