@@ -50,8 +50,8 @@ include해서 사용
 }
 ```
 ```scss
-@include plum(color);
-@include plum(bg);
+@include pink(color);
+@include pink(bg);
 ```
 <br>
 
