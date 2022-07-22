@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+@mixin lavender($type) {
+	@if $type == color{
+		color:lavender;
+	}
+	@else if $type == bg{
+		background-color:lavender;
+	}
+}
+
+// commom start ↓↓
+.wrap{
+	position:relative;
+	overflow: hidden;
+}
+.inner{
+	max-width: 1100px;
+	height:100%;
+	margin:0 auto;
+}
+.header_wrap{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index: 100;
+	width:100%;
+	border-bottom: 1px solid lavender;
+	background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+	
+	.logo{
+		margin:15px 20px;
+		display: inline-block;
+		font-size: 24px;
+		text-decoration: none;
+		@include lavender(color);
+	}
+}
+.footer{
+	position:relative;
+	height:300px;
+	background-color:#111;
+
+	.text_area{
+		position:relative;
+		z-index: 20;
+		padding:20px;
+		
+		p{
+			font-size: 24px;
+			@include lavender(color);
+		}
+	}
+}
+
+.tb_row{
+	display: table;
+	width:100%;
+	height: 100%;
+
+	.tb_cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+// commom end ↑↑
+
+//step4_style start ↓↓
+
+.section_textmask {
+	overflow: hidden;
+	position: relative;
+	padding-top: 160px;
+	padding-bottom: 210px;
+	background: #000;
+  
+	.txt_area .motion_area {
+	  position: relative;
+	  margin-top: 100px;
+	  font-size: 150px;
+	  line-height: 1;
+	  color: #fff;
+  
+	  .text_box {
+		overflow: hidden;
+		text-align: center;
+  
+		.left {
+		  overflow: hidden;
+		  float: left;
+		  width: 50%;
+		  height: 100%;
+  
+		  p {
+			width: 200%;
+			color: #fff;
+  
+			span {
+			  display: inline-block;
+			  padding-bottom: 30px;
+			  text-align: center;
+			  white-space: nowrap;
+			  animation: move_text_mask 2.2s 1 both ease-in-out paused;
+			}
+		  }
+		}
+	  }
+	}
+  
+	&.active .txt_area .motion_area .text_box .left p span {
+	  animation-play-state: running;
+	}
+  
+	.txt_area .motion_area .text_box .right {
+	  overflow: hidden;
+	  float: left;
+	  width: 50%;
+	  height: 100%;
+  
+	  p {
+		width: 200%;
+		margin-left: -100%;
+		@include lavender(color);
+  
+		span {
+		  display: inline-block;
+		  padding-bottom: 30px;
+		  text-align: center;
+		  white-space: nowrap;
+		  animation: move_text_mask 2.2s 1 both ease-in-out paused;
+		}
+	  }
+	}
+  
+	&.active .txt_area .motion_area .text_box .right p span {
+	  animation-play-state: running;
+	}
+  
+	.txt_area .motion_area .text_box {
+	  &.type02 {
+		span {
+		  animation-delay: .3s !important;
+		}
+  
+		.left p {
+			@include lavender(color);
+		}
+  
+		.right p {
+		  color: #fff;
+		}
+	  }
+  
+	  &.type03 span {
+		animation-delay: .6s !important;
+	  }
+	}
+  }
+
+//step4_style end ↑↑
+
+//keyframes start ↓↓
+@keyframes move_text_mask{
+	0%{
+		transform:translateX(-50%);
+	}
+	50%{
+		transform:translateX(50%);
+	}
+	100%{
+		transform:translateX(0%);
+	}
+}
+//keyframes end ↑↑
