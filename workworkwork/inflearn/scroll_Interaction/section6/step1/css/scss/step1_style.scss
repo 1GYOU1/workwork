@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@mixin pink($type) {
+	@if $type == color {
+		color: pink;
+	}
+	@else if $type == bg {
+		background-color: pink;
+	}
+  }
+
+// commom start ↓↓
+.wrap{
+	position:relative;
+	overflow: hidden;
+}
+.inner{
+	max-width: 1100px;
+	height:100%;
+	margin:0 auto;
+}
+.header_wrap{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index: 100;
+	width:100%;
+	border-bottom: 1px solid pink;
+	background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+	
+	.logo{
+		margin:15px 20px;
+		display: inline-block;
+		font-size: 24px;
+		text-decoration: none;
+		@include pink(color);
+	}
+}
+.footer{
+	position:relative;
+	height:300px;
+	background-color:#111;
+
+	.text_area{
+		position:relative;
+		z-index: 20;
+		padding:20px;
+		
+		p{
+			font-size: 24px;
+			@include pink(color);
+		}
+	}
+}
+
+// commom end ↑↑
+
+// style start ↓↓
+.sec01{
+	position: relative;
+	height:100vh;
+	background-color:#111;
+	
+	.nav_list{
+		position: relative;
+        z-index:10;
+		display: table;
+		width:100%;
+		height:100%;
+
+		.list{	
+			display:table-cell;
+			vertical-align: middle;
+
+			li{
+
+				a{
+					overflow:hidden; 
+					position:relative; 
+					display:inline-block; 
+					font-size:140px; 
+					line-height: 1; 
+					transition:transform .5s;
+
+					&:hover{
+						text-decoration: none;
+						transform:translateX(-10px); 
+						-webkit-transform:translateX(-10px); 
+						-moz-transform:translateX(-10px); 
+						-o-transform:translateX(-10px); 
+						-ms-transform:translateX(-10px);
+
+						.mask2{
+							width:100%;
+						}
+						.txt{
+							text-shadow: none;
+							@include pink(color);
+							// text-shadow: -1px 0 10px black, 0 1px 10px black, 1px 0 10px black, 0 -1px 10px black
+						}
+					}
+
+					&:focus{
+						text-decoration: none;
+					}
+
+					.mask{
+						position:absolute; 
+						left:0; 
+						top:0; 
+						z-index:10; 
+						height:100%; 
+						@include pink(bg);
+						animation:text_mask 2s 1 cubic-bezier(0.24, 0.77, 0.32, 0.95) both paused;
+					}
+
+					.txt{
+						position:relative; 
+						z-index:20; 
+						display: block;
+						padding-right:10px; 
+						animation:text_opacity 2s 1s 1 cubic-bezier(0.24, 0.77, 0.32, 0.95) both paused;
+						color:#000;
+						text-shadow: -1px 0 1px pink, 0 1px 1px pink, 1px 0 1px pink, 0 -1px 1px pink;
+					}
+
+					.mask2{
+						position:absolute; 
+						left:0; 
+						bottom:0;
+						z-index:-1; 
+						width:0%; 
+						height:40%; 
+						@include pink(bg);
+						opacity: 0.5; 
+						transition:width .5s cubic-bezier(0.24, 0.77, 0.32, 0.95);
+					}
+				}
+			}
+		}
+	}
+	.bg_rotate{
+		position:absolute; 
+		left:50%; 
+		top:50%; 
+		z-index:0; 
+		width:1200px; 
+		height:1215px; 
+		margin-left:-357px; 
+		margin-top:-350px; 
+		background-image:url('../../images/bg_rotate01.png'); 
+		background-repeat: no-repeat; 
+		background-size:cover; 
+		opacity: .15; 
+		animation:rotate_bg 40s infinite linear paused;
+	}
+	&.active{
+
+		.nav_list{
+
+			.list{
+
+				li{
+
+					a{
+
+						.mask{
+							animation-play-state: running;
+						}
+
+						.txt{
+							animation-play-state: running;
+						}
+					}
+				}
+			}
+		}
+		
+		.bg_rotate{
+			animation-play-state: running;
+		}
+	}
+}
+// style end ↑↑
+
+// keyframes animation start ↓↓
+@keyframes text_mask {
+	0%{
+		width: 0%;
+		transform:translateX(0%);
+	}
+	50%{
+		width: 100%;
+		transform:translateX(0%);
+	}
+	100%{
+		width: 100%;
+		transform:translateX(101%);
+	}
+}
+
+@keyframes text_opacity {
+	0%{
+		opacity: 0;
+		transform:translateX(-50%);
+	}
+	100%{
+		opacity: 1;
+		transform:translateX(0%);
+	}
+}
+
+@keyframes rotate_bg {
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+// keyframes animation end ↑↑
