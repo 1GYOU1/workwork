@@ -20,3 +20,5 @@ new Date()
 .split()
 
 .reverse();
+
+.hash
