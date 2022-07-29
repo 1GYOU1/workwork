@@ -9,6 +9,12 @@
 	}
   }
 ```
+
+-webkit-text-stroke:,
+-webkit-text-fill-color: 속성은 ex에서 XX
+
+
+
 new Date()
 
 .getFullYear()
@@ -22,3 +28,4 @@ new Date()
 .reverse();
 
 .hash
+
