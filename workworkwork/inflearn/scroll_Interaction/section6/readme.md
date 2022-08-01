@@ -186,12 +186,14 @@ string.split( separator, limit )
 ```
 <br>
 
-분할 기준 적용
+__분할 기준 적용__ - 필수(X)
+
+값이 입력되지 않으면 문자열 전체를 배열에 담아서 리턴
 
 ```js
-var groub = 'a,b,c';
-var groubSplit = groub.split(',');//,기준으로 자르기
-for ( var i in groubSplit ) {
+let groub = 'a,b,c';
+let groubSplit = groub.split(',');//,기준으로 자르기
+for ( let i in groubSplit ) {
 console.log(groubSplit[i]);
 //a
 //b
@@ -200,22 +202,31 @@ console.log(groubSplit[i]);
 ```
 <br>
 
-최대 분할 개수 지정
+__최대 분할 개수 지정__ - 필수(X)
 
 ```js
-var groub = 'a,b,c';
-var groubSplit = groub.split( ',', 2 );
-for ( var i in groubSplit ) {
+let groub = 'a,b,c';
+let groubSplit = groub.split( ',', 2 );
+for ( let i in groubSplit ) {
 console.log(groubSplit[i]);
 //a
 //b
 }
 ```
+<br>
 
+----
 
-[.split()과 .split("")의 차이](https://somjang.tistory.com/entry/Python-%EB%AC%B8%EC%9E%90%EC%97%B4-split-%EA%B3%BC-split-%EC%B0%A8%EC%9D%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+<br>
 
-.reverse();
+## __.reverse()__
 
-.hash
+<br>
+
+반전 - 배열 거꾸로 뒤집기
+```js
+const array1 = ['a', 'b', 'c', 'd'];
+console.log(array1.reverse())
+//(4) ['d', 'c', 'b', 'a']
+```
 
