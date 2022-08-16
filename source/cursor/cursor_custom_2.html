@@ -14,25 +14,14 @@
 
         #custom_cursor{position: fixed;top: 0;left: 0;z-index: 99999;pointer-events: none;opacity:0;}
         #custom_cursor:not(.small){width: 60px;height: 60px;}
-        #custom_cursor.small{width: 0px !important;height: 0px !important;}
+
         .custom_cursor_inner {display: block;width: 100%;height: 100%;position: relative;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
-        .custom_cursor_circle, .custom_cursor_txt {display: block;width: 0;height: 0;position: absolute;top: 0;left: 0;border-radius: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);overflow: hidden;width: 15px;height: 15px;background: rgba(251,57,73,0.5);}
-        .custom_cursor_circle {z-index: 1;}
-        html.ie .custom_cursor_circle {background: rgba(255,255,255,0.5);}
-        .custom_cursor_txt {z-index: 2;}
-        .custom_cursor_txt > span{position: relative;display: block;width: 79px;height: 100%;font-size: 1.2rem;text-align: center;color: #fff;font-family: 'Montserrat';text-transform: uppercase;display: flex;flex-wrap: wrap;align-items: center;justify-content: center;font-weight: 500;letter-spacing: -0.5px;line-height: 1.4;margin: 0 auto;}
-        #custom_cursor_text.drag .custom_cursor_txt {background-size: 89px auto;}
-
-        html.ie10 #custom_cursor, html.ie10 #custom_cursor_text {display: none;}
-        html.edge #custom_cursor_text.drag .custom_cursor_txt {background-size: 90px auto;}
-
+        .custom_cursor_circle{display: block;width: 0;height: 0;position: absolute;top: 0;left: 0;border-radius: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);overflow: hidden;width: 15px;height: 15px;background: rgba(251,57,73,0.5);z-index: 1;}
 
         #custom_cursor.on{mix-blend-mode: difference;}
         #custom_cursor.on .custom_cursor_circle{background:#fff;}
         #custom_cursor_text.on .custom_cursor_inner{opacity:0;}
         #custom_cursor_text .custom_cursor_inner{transition:0.3s;}
-        #custom_cursor.prev:before {content:"";position:absolute;top:-5px;left:-72%;width:10px;height:13px;background:url(/images/common/cursor_prev.png) no-repeat center;}
-        #custom_cursor.next:before {content:"";position:absolute;top:-5px;right:27%;width:10px;height:13px;background:url(/images/common/cursor_next.png) no-repeat center;}
 
 		.hamburger_btn{width:40px;height: 40px;display: block;}
 		.hamburger_btn span{display:block; width:100%;height:2px;background:#fff;}
