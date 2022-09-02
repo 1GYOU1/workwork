@@ -23,3 +23,5 @@ git remote set-url origin https://github.com/1GYOU1/inflearn.git
 git push --mirror
 ```
 
+git 연결 참고
+https://investechnews.com/2021/06/14/mac-git-setting/
