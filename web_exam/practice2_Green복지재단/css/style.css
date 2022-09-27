@@ -27,7 +27,8 @@ header .sub_menu ul li a:hover{background-color:lightsalmon;color:#fff;}
 .container .notice ul li a{overflow: hidden;text-overflow: ellipsis;width:95%;white-space:nowrap;display: inline-block;}
 .container .gallery .img_box{display: flex;}
 .container .gallery .img_box img{width:33.3%;padding:5px;}
-.container .banner{background-color:lavender;}
+.container .banner{padding:0;}
+.container .banner img{width:100%;height:200px}
 
 footer{display: flex;justify-content: center;align-items: center;height:110px;background-color: honeydew;}
 footer .logo{width:200px}
