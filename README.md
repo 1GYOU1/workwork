@@ -1,5 +1,20 @@
 # __git__
 
+## MAC 터미널
+
+```
+$ cd //폴더로 진입
+$ cd .. //상위 폴더로 이동
+$ git status //현재 깃 연동 상태 확인
+```
+[기본 명령어 참고 사이트 ①](https://tagilog.tistory.com/1013)
+
+[기본 명령어 참고 사이트 ②](https://nerogarret.tistory.com/3)
+
+<br>
+
+----
+
 ## MAC git 초기 설정
 
 [참고사이트 ①](https://investechnews.com/2021/06/14/mac-git-setting/)
@@ -11,6 +26,7 @@
 ## github 기본 사용 code
 
 ```
+$ git push
 ```
 
 ----
