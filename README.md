@@ -29,6 +29,19 @@ $ git status //현재 깃 연동 상태 확인
 $ git push
 ```
 
+입력모드를 사용한 후 ESC 를 통해 꼭 명령모드로 돌아가기.
+
+```
+:q  // (변경없을 때, 저장없이) 종료
+:q! // (저장없이) 강제 종료
+:wq // 저장 후 종료
+:w  // (종료없이) 저장
+```
+
+[터미널 명령어 참고 사이트 ①](https://jooncco.com/git/git-undoing-changes/)
+
+[터미널 명령어 참고 사이트 ②](https://haloaround.tistory.com/m/27)
+
 ----
 
 ## github repository clone
