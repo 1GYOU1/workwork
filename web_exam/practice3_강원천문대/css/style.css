@@ -1,26 +1,47 @@
 @charset "UTF-8";
 
-*{padding:0;margin:0;}
+*{padding:0;margin:0;box-sizing: border-box;}
 li{list-style: none;}
 a{color:#000;text-decoration: none;}
 
-.wrap{width:1200px;margin:0 auto;}
-header{position:relative;display: flex;justify-content: space-between;height:100px;}
+.wrap{width:1200px;margin:0 auto;background-color:#fff;color:#333;}
+header{position:relative;display: flex;justify-content: space-between;height:100px;z-index: 1;}
 
-header .logo{}
-header .menu{}
+header .logo{margin-top:30px}
+header .menu{margin-top:25px;}
 header .menu>ul{display: flex;}
-header .menu .sub_menu{}
+header .menu>ul>li>a{display: block;padding:15px 20px;background-color:#eee;}
+header .menu>ul>li>a:hover{background-color:#333;color:#fff;}
+header .menu .sub_menu li a{padding:15px 20px;display: block;background-color:skyblue;}
+header .menu .sub_menu li a:hover{background-color:lavender;}
 
 .main_visual{position:relative;height:300px;}
+.main_visual .slider{display: flex;}
 
-.container{position:relative;display: flex;height:200px;}
-.container .cont01 .tab_cont02 a{display: inline-block;width:33.3%}
-.container .tab_cont02{display: flex;}
+.container{position:relative;display: flex;height:200px;overflow: hidden;}
+.container .cont01{width:33.3%}
+.container .cont01 .tab_menu ul{display: flex;}
+.container .cont01 .tab_menu ul li{background-color:pink}
+.container .cont01 .tab_menu ul li:last-child{background-color:coral}
+.container .cont01 .tab_menu ul li a{display:inline-block;height:30px;line-height: 30px;padding:0 5px;}
+.container .cont01 .tab_cont01{height:170px;padding:10px;display: none;background-color:000;}
+.container .cont01 .tab_cont02{height:170px;display: flex;padding:20px;align-items: center;justify-content: space-between;background-color:pink}
+.container .cont01 .tab_cont02 a{display: inline-block;width:30%}
+.container .cont01 .tab_cont02 a img{width:100%}
+.container .cont02{width:33.3%}
+.container .cont02 img{width:100%;height:100%;}
+.container .cont03{width:33.3%}
+.container .cont03 img{width:100%;height:100%;}
 
-footer{posiiton:relative;display: flex;height:100px;}
-footer .f_right{display: flex;flex-direction: row;}
+footer{position:relative;display: flex;height:100px;justify-content: space-between;}
+footer .f_logo{width:20%}
+footer .f_logo a{display: block;margin-top:35px}
+footer .f_right{display: flex;flex-direction: column;width:80%;justify-content: center;}
 footer .f_right .f_menu{display: flex;}
+footer .f_right .f_menu li{width:33.3%;text-align: center;}
 footer .f_right .f_copy{text-align: center;}
+
+.popup{position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);background-color:#fff;border:1px solid #eee;text-align: center;width:200px;height:200px;}
+.popup button{position:absolute;bottom:0;right:0;}
 
 
