@@ -7,15 +7,16 @@ li{list-style: none;}
 .wrap{width:1200px;margin:0 auto;overflow: hidden;}
 header{width:1200px;height:100px;position:relative;display: flex;justify-content: space-between;z-index: 999;}
 header .logo{margin-top:30px;}
-header .main_menu{margin-top:30px;}
+header .main_menu{margin-top:30px;z-index: 6;}
 header .main_menu > ul{display: flex;justify-content: flex-end;}
 header .main_menu > ul > li{text-align: center;}
 header .main_menu > ul > li > a{background-color:lightpink;}
 header .main_menu > ul > li:hover > a{background-color:lightblue}
 header .main_menu ul > li > a{display:block;width:200px;height:50px;line-height: 50px;float: right;}
+header .sub_menu{display: none;}
 header .sub_menu li a{background-color:honeydew;}
 header .sub_menu li a:hover{background-color:lightgrey}
-header .menu_bg{width:1200px;background-color:honeydew;height:500px}
+header .menu_bg{width:1200px;background-color:honeydew;height:200px;position:absolute;top:80px;left:0;z-index: 5;display: none;}
 
 .main_visual{position:relative;height:300px}
 .main_visual .slider li{position:absolute;top:0;left:0;}
@@ -23,13 +24,24 @@ header .menu_bg{width:1200px;background-color:honeydew;height:500px}
 
 .container{display: flex;height:200px;overflow: hidden;}
 .container [class^=cont] {width:33.3%}
+.container .notice{width:100px;height:50px;background-color:pink;line-height: 50px;text-align: center;}
+.container .notice_cont{width:100%;height:150px;background-color:aliceblue}
+.container .notice_cont ul{padding:10px;display: flex;flex-direction: column;}
+.container .notice_cont ul li{padding:5px 0;}
+.container .notice_cont ul li a{display: flex;justify-content: space-between;}
+.container .gallery{width:100px;height:50px;background-color:pink;line-height: 50px;text-align: center;}
+.container .cont02 .gallery_cont{height:150px;display: flex;padding:10px;background-color:lightgray}
+.container .cont02 .gallery_cont a{margin-right:10px;}
+.container .cont02 .gallery_cont a:last-of-type{margin-right:0;}
 .container .cont02 .gallery_cont img{width:100%;height:100%}
+.container .cont03 img{width:100%;height:100%;}
 
 footer{display: flex;}
 footer .f_left{width:80%;}
 footer .f_left ul{display: flex;}
 footer .f_left ul li a{text-align: center;display: block;width:200px;height:50px;line-height: 50px;margin-right:20px;}
-footer .family_site{width:20%;}
+footer .family_site{width:20%;margin-top:22px;}
+footer .copyright{text-align: center;}
 
 .popup{background-color:#fff;width:300px;height:300px;padding:10px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);text-align: center;border:1px solid pink;display: none;}
 .popup button{position:absolute;bottom:10px;right:10px;}
