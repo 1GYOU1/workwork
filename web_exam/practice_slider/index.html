@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>slider practice</title>
+	<style>
+		*{padding:0;margin:0;}
+		ul li{list-style: none;}
+		.wrap{width:1200px;margin:0 auto;}
+		div[class^=slider]{position:relative;height:300px;margin-bottom:20px}
+		/* fadeIn fadeOut */
+		.slider_1 ul li{position:absolute;top:0;left:0;}
+		.slider_1 ul li:first-of-type{z-index: 3;}
+		.slider_1 ul li:nth-of-type(2){z-index: 2;}
+		.slider_1 ul li:last-of-type{z-index: 1;}
+		/* horizontal */
+		.slider_2{width:1200px;overflow: hidden;}
+		.slider_2 ul{display: flex;}
+		/* vertical */
+		.slider_3{width:1200px;overflow: hidden;}
+		.slider_3 ul{display: flex;flex-direction: column;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<!-- fadeIn fadeOut -->
+		<div class="slider_1">
+			<ul>
+				<li><a href="#"><img src="./img/slide1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide3.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div class="slider_2">
+			<ul>
+				<li><a href="#"><img src="./img/slide1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide3.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div class="slider_3">
+			<ul>
+				<li><a href="#"><img src="./img/slide1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="./img/slide3.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="./js/jquery-3.6.1.min.js"></script>
+	<script>
+		//fadeIn fadeOut
+		var num = 0;
+		var img = 2;
+		setInterval(fadeSliderEvent, 2000);
+		function fadeSliderEvent(){
+			$('.slider_1 ul li').eq(num).fadeIn();
+			$('.slider_1 ul li').eq(num-1).fadeOut();
+			if(num == img){
+				num = 0;
+			}else{
+				num++;
+			}
+		};
+
+		//horizontal
+		// 방법1
+		var s2_num = 0;
+		var s2_img = 2;
+		setInterval(horizonralSlider,2000)
+		function horizonralSlider(){
+			$('.slider_2 ul').animate({'margin-left' : (-1200*s2_num) + 'px'});
+			if(s2_num == s2_img){
+				s2_num = 0;
+			}else{
+				s2_num++;
+			}
+		};
+
+		// 방법2
+		// setInterval(function(){
+		// 	$('.slider_2 ul').delay(2500);
+		// 	$('.slider_2 ul').animate({'margin-left':'-1200px'});
+		// 	$('.slider_2 ul').delay(2500);
+		// 	$('.slider_2 ul').animate({'margin-left':'-2400px'});
+		// 	$('.slider_2 ul').delay(2500);
+		// 	$('.slider_2 ul').animate({'margin-left':'0px'});
+		// });
+		
+		//vertical
+		var s3_num = 0;
+		var s3_img = 2;
+		setInterval(verticalSlider, 2000)
+		function verticalSlider(){
+			$('.slider_3 ul').animate({'margin-top':(-305*s3_num)+'px'});
+			if(s3_num == s3_img){
+				s3_num = 0;
+			}else{
+				s3_num++;
+			}
+		};
+	</script>
+</body>
+</html>
