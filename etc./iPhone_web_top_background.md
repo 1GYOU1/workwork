@@ -12,6 +12,7 @@ Safari HTML의 메타태그에 아래와 같은 코드가 있으면 적용한다
 <img src="https://user-images.githubusercontent.com/90018379/209765086-22f11c71-fa4e-4aa6-836e-50dd537c12d6.jpg" style="width:32%;height:auto;">
 <img src="https://user-images.githubusercontent.com/90018379/209765085-1ee19ba8-f0c4-499e-9b2e-d8cc7f190a1b.jpg" style="width:32%;height:auto;">
 </p>
+
 ```html
 <!-- Chrome, Firefox, Opera -->
 <meta name='theme-color' content='#fff'/>
