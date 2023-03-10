@@ -1,6 +1,6 @@
 # coding apple git
 
-## 작업폴더에서 git 이용하기
+## 작업폴더에서 git 이용하기 - 명령어
 
 vscode에서 작업폴더 기준으로 터미널 열고 git init 입력하면 파일 생성, 수정하는 것을 추적.
 
@@ -45,3 +45,24 @@ commit 기록 한 눈에 파악하기
 >$ git log --all --oneline
 
 >$ git log --all --oneline --graph
+
+<br>
+
+---
+
+## repository에 push까지의 순서
+
+1. 저장소 초기화 
+>$ git init
+
+2. 저장소, 브랜치 연동
+>$ git remote add main https://github.com/1GYOU1/Git.git
+
+3. 스테이징 시킬 파일 선택
+>$ git add .
+
+4. 커밋 메세지 작성
+>$ git commit -m "message"
+
+5. push
+>$ git push
