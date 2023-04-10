@@ -1,6 +1,14 @@
 # __git__
 
+## git 사용자 이름, 이메일 설정
+
+>$ git config --global user.name "1GYOU1"
+
+>$ git config --global user.email "1gyou1@naver.com"
+
 <br>
+
+---
 
 ## MAC 터미널
 
